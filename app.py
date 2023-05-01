@@ -19,10 +19,10 @@ if __name__ =='__main__':
 
     @st.cache_data
     def get_data_from_excel():
-        '''file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'supermarkt_sales.xlsx')
+        '''file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'supermarket_sales.xlsx')
         df = pd.read_excel(file_path, header=3, usecols='B:R', nrows=1000)
         '''
-        file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'supermarkt_sales.csv')
+        file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'supermarket_sales.csv')
         df = pd.read_csv(file_path, header=0)
         df['time'] = pd.to_datetime(df['time'], format='%H:%M')
         df['hour'] = df['time'].apply(lambda x: str(x.hour)) # cast to string to avoid FORCED sorting on chart axis
