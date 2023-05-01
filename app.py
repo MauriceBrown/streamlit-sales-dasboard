@@ -207,8 +207,8 @@ if __name__ =='__main__':
 
     ############# 2C) RAW DATA #############
     st.markdown('---')
-    st.subheader('Raw Data')
-    st.dataframe(df)
+    st.subheader('Filtered Data')
+    st.dataframe(filtered_df)
 
     ############# 3) HIDE STREAMLIT INFO #############
     hide_st_style = '''
