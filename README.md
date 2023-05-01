@@ -1,4 +1,4 @@
-# streamlit-sales-dasboard
+# Streamlit Sales Dasboard
 A dashboard for some dummy sales data built using python and streamlit
 
 [This dashboard is currently live on streamlit community cloud.](https://mauricebrown-streamlit-sales-dashboard-app-2h1wtf.streamlit.app)
