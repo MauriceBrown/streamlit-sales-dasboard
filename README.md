@@ -1,7 +1,7 @@
 # streamlit-sales-dasboard
 A dashboard for some dummy sales data built using python and streamlit
 
-The data is available in Excel and csv format in the "supermarkt_sales.xlsx" and "supermarkt_sales.csv" files.
+The data is available in Excel and csv format in the **supermarket_sales.xlsx** and **supermarket_sales.csv** files in this repo.
 
 The dashboard is split into **three** sections and a sidebar
 
