@@ -24,8 +24,8 @@ if __name__ =='__main__':
         '''
         file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'supermarkt_sales.csv')
         df = pd.read_csv(file_path, header=0)
+        df['time'] = pd.to_datetime(df['time'], format='%H:%M')
         df['hour'] = df['time'].apply(lambda x: str(x.hour)) # cast to string to avoid FORCED sorting on chart axis
-        df['week_beginning_monday'] = df['date'].apply(lambda x: x - pd.Timedelta(x.weekday(), 'day'))
         
         return df
     
