@@ -19,10 +19,14 @@ if __name__ =='__main__':
 
     @st.cache_data
     def get_data_from_excel():
-        file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'supermarkt_sales.xlsx')        
+        '''file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'supermarkt_sales.xlsx')
         df = pd.read_excel(file_path, header=3, usecols='B:R', nrows=1000)
+        '''
+        file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'supermarkt_sales.csv')
+        df = pd.read_csv(file_path, header=0)
         df['hour'] = df['time'].apply(lambda x: str(x.hour)) # cast to string to avoid FORCED sorting on chart axis
-        df['week_beginning_monday'] = df['date'].apply(lambda x: x - pd.Timedelta(x.weekday(), 'day'))        
+        df['week_beginning_monday'] = df['date'].apply(lambda x: x - pd.Timedelta(x.weekday(), 'day'))
+        
         return df
     
     def get_column_display_names(column_names):
